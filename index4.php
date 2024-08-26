@@ -15,5 +15,5 @@
         <li>Discount: <?= $room['discount']?>%</li>
     </ul>
 <?php } else { ?>
-    <h3>No room mf</h3>
+    <h3>No room</h3>
 <?php } ?>
