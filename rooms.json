@@ -1,6 +1,7 @@
 [
     {
-      "name": "Deluxe A-91235",
+      "name": "Single A-91235",
+      "number": 11,
       "id": "1234",
       "image": "/assets/HotelRoom3.jpeg",
       "roomType": "Single Bed",
@@ -8,10 +9,11 @@
       "rate": 300,
       "offer": "20% off",
       "status": "Available",
-      "discount": 0
+      "discount": 5
     },
     {
-      "name": "Deluxe A-91234",
+      "name": "Double A-91234",
+      "number": 15,
       "id": "5678",
       "image": "/assets/HotelRoom3.jpeg",
       "roomType": "Single Bed",
@@ -19,10 +21,11 @@
       "rate": 150,
       "offer": "10% off",
       "status": "Available",
-      "discount": 0
+      "discount": 10
     },
     {
-      "name": "Deluxe A-91234",
+      "name": "Double Superior A-91234",
+      "number": 24,
       "id": "9012",
       "image": "/assets/HotelRoom3.jpeg",
       "roomType": "Double Bed",
@@ -30,10 +33,11 @@
       "rate": 400,
       "offer": "30% off",
       "status": "Booked",
-      "discount": 0
+      "discount": 15
     },
     {
-      "name": "Deluxe A-91234",
+      "name": "Suite B-51134",
+      "number": 31,
       "id": "3456",
       "image": "/assets/HotelRoom3.jpeg",
       "roomType": "Double Superior",
@@ -41,10 +45,11 @@
       "rate": 250,
       "offer": "15% off",
       "status": "Available",
-      "discount": 0
+      "discount": 5
     },
     {
-      "name": "Deluxe A-91234",
+      "name": "Suite A-91234",
+      "number": 45,
       "id": "7890",
       "image": "/assets/HotelRoom3.jpeg",
       "roomType": "Suite",
@@ -52,6 +57,6 @@
       "rate": 350,
       "offer": "25% off",
       "status": "Booked",
-      "discount": 0
+      "discount": 10
     }
   ]
