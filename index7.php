@@ -9,7 +9,7 @@
       $rooms = $mysqli -> query('SELECT * FROM rooms ORDER BY id DESC');
       $row = $rooms -> fetch_assoc();
 
-      $name = $_GET['name'] ?? NULL;
+      $name = $_GET['search'] ?? NULL;
 
       if ($name !== NULL) {
         $rooms = $mysqli -> query("SELECT * FROM rooms WHERE name LIKE '{$name}%'");
@@ -19,7 +19,7 @@
 
 <?php if ($name !== NULL) { ?>
     <?php if (!$rooms->num_rows) { ?>
-        <h1>No rooms mf</h1>
+        <h1>No rooms</h1>
     <?php } else { ?>
         <h1>Rooms:</h1>
         <?php foreach ($rooms as $room): ?>
@@ -34,7 +34,7 @@
 <?php } else { ?>
     <h1>Search rooms</h1>
     <form>
-        Name: <input type="text" name="name"><br>
+        Name: <input type="text" name="search"><br>
         <input type="submit">
     </form>
     <ol>
