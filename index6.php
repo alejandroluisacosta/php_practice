@@ -16,7 +16,7 @@
 <?php if ($room) { ?>
     <h1>Room: <?= $room['name'] ?></h1>
     <ul>
-        <li>Number: <?= $room['number']?></li>
+        <li>Number: <?= $room['id']?></li>
         <li>Price: $<?= $room['rate']?></li>
         <li>Discount: <?= $room['discount']?>%</li>
     </ul>
