@@ -15,19 +15,22 @@
         $rooms = $mysqli -> query("SELECT * FROM rooms WHERE name LIKE '{$name}%'");
         $rows = $rooms -> fetch_assoc();
       }
-
 ?>
 
 <?php if ($name !== NULL) { ?>
-    <h1>Rooms:</h1>
-    <?php foreach ($rooms as $room): ?>
-        <h3><?= $room['name'] ?></h3>
-        <ul>
-            <li>Number: <?= $room['id']?></li>
-            <li>Price: $<?= $room['rate']?></li>
-            <li>Discount: <?= $room['discount']?>%</li>
-        </ul>
-    <?php endforeach ?>
+    <?php if (!$rooms->num_rows) { ?>
+        <h1>No rooms mf</h1>
+    <?php } else { ?>
+        <h1>Rooms:</h1>
+        <?php foreach ($rooms as $room): ?>
+            <h3><?= $room['name'] ?></h3>
+            <ul>
+                <li>Number: <?= $room['id']?></li>
+                <li>Price: $<?= $room['rate']?></li>
+                <li>Discount: <?= $room['discount']?>%</li>
+            </ul>
+        <?php endforeach ?>
+    <?php } ?>
 <?php } else { ?>
     <h1>Search rooms</h1>
     <form>
