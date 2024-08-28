@@ -21,7 +21,12 @@
     <?php if (!$rooms->num_rows) { ?>
         <h1>No rooms</h1>
     <?php } else { ?>
-        <h1>Rooms:</h1>
+        <a href="index7.php"><- All rooms</a>
+        <h1>Results</h1>
+        <form>
+            Name: <input type="text" name="search"><br>
+            <input type="submit">
+        </form>
         <?php foreach ($rooms as $room): ?>
             <h3><?= $room['name'] ?></h3>
             <ul>
