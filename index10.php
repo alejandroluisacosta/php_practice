@@ -1,18 +1,3 @@
 <?php
-
-    $mysqli = new mysqli("localhost","root","Aa197356482!","miranda");
-        
-    if ($mysqli -> connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-        exit();
-    }
-  
-    $rooms = $mysqli -> query('SELECT * FROM rooms ORDER BY id DESC');
-    $row = $rooms -> fetch_assoc();
-    require_once('./BladeOne.php');
-    use eftec\bladeone\BladeOne;
-
-    $views = __DIR__ . '/views';
-    $cache = __DIR__ . '/cache';
-    $blade = new BladeOne($views,$cache,BladeOne::MODE_DEBUG);
-    echo $blade->run('hello',array('rooms'=>$rooms));
+    require_once('./setup.php');
+    echo $blade->run('rooms',array('rooms'=>$rooms));
